@@ -11,13 +11,10 @@
 body {
   background: #585c68;
   font-size: 14px;
-  line-height: 10px;
+  line-height: 22px;
   color: #555555;
 }
 
-a, a:hover{
-  text-decoration: none;
-}
 .bold {
   font-weight: 700;
   font-size: 20px;
@@ -43,17 +40,12 @@ a, a:hover{
 
 .resume .resume_left .resume_profile {
   width: 100%;
-  height: 284px;
-
-}
-.resume_profile img:hover{
-  transform: scale(1.5);
+  height: 280px;
 }
 
 .resume .resume_left .resume_profile img {
   width: 100%;
   height: 100%;
-  transition: transform .2s; /* Animation */
 }
 
 .resume .resume_left .resume_content {
