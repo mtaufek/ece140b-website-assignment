@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page Info -->
+    <title>Agile Demo</title>
+    <meta name="author" content="Adib Thaqif">
+    <meta name="description" content="Welcome!">
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+  </head>
+
+  <body>
+    <h2>Welcome!</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Comment</th>
+        </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td>{{user[0]}}</td>
+            <td>{{user[1]}}</td>
+            <td>{{user[2]}}</td>
+            <td>{{user[3]}}</td>
+          </tr>
+          {% endfor %}
+        <tbody>
+    </table>
+    <div class="login-page">
+      <h3>Please Comment!</h3>
+  <div class="form">
+    <form class="login-form">
+      <input type="text" placeholder="First name"/>
+      <input type="text" placeholder="Last name"/>
+      <input type="email" placeholder="Email"/>
+      <input type="text" placeholder="Comment"/>
+      <button type="submit" onclick="addUser()">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
+  </body>
+  <script src="welcome.js"></script>
+</html>
