@@ -1,4 +1,4 @@
-function addUser(){
+function add_user(){
   var firstname = document.getElementById('firstname').value;
   var lastname = document.getElementById('lastname').value;
   var email = document.getElementById('email').value;
