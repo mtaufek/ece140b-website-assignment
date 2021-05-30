@@ -31,17 +31,22 @@ def get_cv(req):
   return render_to_response('templates/cv.html', [], request=req)
 
 def add_user(req):
-  new_user = json.loads(req.text)
+  output = json.loads(req.text)
+  first_name = output.get('firstname')
+  last_name = output.get('lastname')
+  email = output.get('email')
+  comment = output.get('comment')
+  print('NEW USER: ', first_name, last_name, email, comment)
   db = mysql.connect(host=db_host, database=db_name, user=db_user, passwd=db_pass)
   cursor = db.cursor()
-  insert_stmt = "INSERT INTO Commands (first_name, last_name, email, comment) VALUES (%s, %s, %s, %s)"
-  print('NEW USER: ', new_user)
-  data = (new_user, 0)
+  insert_stmt = "INSERT INTO Users (first_name, last_name, email, comment) VALUES (%s, %s, %s, %s)"
+  data = (first_name, last_name, email, comment)
   cursor.execute(insert_stmt, data)
+  db.commit()
   print('-----INSERT-----')
   print(cursor.rowcount, "record inserted.")
   print('-----ALL ROWS-----')
-  cursor.execute("SELECT * FROM Commands")
+  cursor.execute("SELECT * FROM Users")
 
 def get_avatar(req, req1):
   return { 
