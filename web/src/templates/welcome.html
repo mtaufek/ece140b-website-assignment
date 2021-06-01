@@ -14,7 +14,20 @@
 </head>
 
 <body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/welcome">Welcome</a>
+    <a href="/cv">My Resume</a>
+    <a target="_blank" href="http://128.199.10.10/cv">Tanvir's Resume</a>
+    <a target="_blank" href="http://165.232.152.55/cv">Hector's Resume</a>
+    <a target="_blank" href="http://143.110.229.54/cv">Michael's Resume</a>
+    <div class="animation start-home"></div>
+  </nav>
   <h2>Welcome!</h2>
+  <div class="alert" id="alert" style=" display: none">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Thank you!</strong>
+  </div>
   <div class="table-wrapper">
     <table class="fl-table">
       <thead>
@@ -40,10 +53,10 @@
       <h3>Please Comment!</h3>
       <div class="form">
         <form class="login-form">
-          <input type="text" placeholder="First name" id="firstname"/>
-          <input type="text" placeholder="Last name" id="lastname"/>
-          <input type="email" placeholder="Email" id="email"/>
-          <input type="text" placeholder="Comment" id="comment"/>
+          <input type="text" placeholder="First name" id="firstname" />
+          <input type="text" placeholder="Last name" id="lastname" />
+          <input type="email" placeholder="Email" id="email" />
+          <input type="text" placeholder="Comment" id="comment" />
           <button type="submit" onclick="add_user()">Submit</button>
         </form>
       </div>
